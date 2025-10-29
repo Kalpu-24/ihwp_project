@@ -30,6 +30,7 @@ Before running the project, ensure you have the following installed:
 - **npm** (v7+) Package manager
 - **Git** – Version control – [Download](https://git-scm.com/)
 - **Supabase Account**
+- **Supabase CLI**
 
 ## 🚀 Installation and Run project
 
@@ -42,7 +43,25 @@ Before running the project, ensure you have the following installed:
   ```bash
   npm install
   ```
-3.**Run the project**
+  and 
+  ```bash
+  npm install supabase
+  ```
+3.**Create Account on supabase and update .env with you credentials**<br>
+```bash
+Example:
+VITE_SUPABASE_URL=https://rtoeqzp....bwjkdzwh.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS...
+```
+4.**Link project to supabase project for migration**
+```bash
+npx supabase link --project-ref your-project-id
+```
+5.**Migrate Database to Supabase**
+```bash
+npx supabase migration up --linked
+```
+6.**Run the project**
   ```bash
   npm run dev
   ```
