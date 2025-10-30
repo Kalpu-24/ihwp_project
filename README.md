@@ -36,7 +36,7 @@ Before running the project, ensure you have the following installed:
 
 1. **Clone the repository**
   ```bash
-  git clone https://github.com/CoderVed04/ihwp_project.git
+  git clone https://github.com/Kalpu-24/ihwp_project.git
   cd ihwp_project
   ```
 2.**Install dependencies**
@@ -61,7 +61,16 @@ npx supabase link --project-ref your-project-id
 ```bash
 npx supabase migration up --linked
 ```
-6.**Run the project**
+6.**Disable RLS**
+```
+Open Supabase dashboard, go to table editor, profiles table and disable rls.
+```
+7.**Seed questions and recommendations data to database**
+```
+Copy text from ./supabase/data/seed.sql
+and paste it on supabase dashboard/ sql editor and run it to feed data in database.
+```
+8.**Run the project**
   ```bash
   npm run dev
   ```
